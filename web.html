@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do List — Vanilla JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" role="main" aria-label="To-do app">
+    <header class="app-header">
+      <h1>To-Do</h1>
+
+      <form id="task-form" class="task-form" autocomplete="off" aria-label="Add new task">
+        <input id="task-input" name="task" type="text" placeholder="Add a new task and press Enter..." />
+        <button type="submit" id="add-btn" aria-label="Add task">Add</button>
+      </form>
+    </header>
+
+    <section class="controls">
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="active" aria-pressed="false">Active</button>
+        <button class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+
+      <button id="clear-completed" class="clear-btn">Clear completed</button>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <footer class="app-footer">
+      <span id="items-left">0 items left</span>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
